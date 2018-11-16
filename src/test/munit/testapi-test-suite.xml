@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="testapi-test-suite.xml" />
+	<munit:test name="testapi-test-suite-testapi-mainTest" description="Test" doc:id="e943de48-0fce-413b-af5a-0388a8399dbb" >
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to testapi-main" doc:id="c3d62238-63c6-40ec-8cec-de36c4bb1071" name="testapi-main"/>
+		</munit:execution>
+	</munit:test>
+	<munit:test name="testapi-test-suite-testapi-consoleTest" description="Test" doc:id="19bd4647-75f9-413e-bb92-8ec5d5671baf" >
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to testapi-console" doc:id="dfef7e27-bb3a-4f3d-987d-42680a701ead" name="testapi-console"/>
+		</munit:execution>
+	</munit:test>
+	<munit:test name="testapi-test-suite-get:\products\(productId):testapi-configTest" description="Test" doc:id="30866f66-4ab3-4edf-93c0-5c36327b6121" >
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to get:\products\(productId):testapi-config" doc:id="c39d43d4-7e54-49bf-b98c-439c5ca3984c" name="get:\products\(productId):testapi-config"/>
+		</munit:execution>
+	</munit:test>
+
+
+</mule>
